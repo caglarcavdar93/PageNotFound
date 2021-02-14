@@ -90,11 +90,10 @@ const game = () => {
 let gap = 1;
 let cube = 10;
 let locationList = [];
-const letterLocation = (posX, posY, color = "white") => {
+const letterLocation = (posX, posY) => {
     return {
         x: posX,
-        y: posY,
-        color
+        y: posY
     }
 };
 const revealRandomPoint=()=>{
@@ -112,6 +111,7 @@ const revealRandomPoint=()=>{
     }
 }
 const createNotFound = () => {
+    locationList=[];
     createN(20, 20);
     createO(170, 20);
     createT(290, 20);
